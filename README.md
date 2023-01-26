@@ -18,7 +18,9 @@ This project has following dependencies:
 ---
 
 ## Usage
+
 Run the `LukeWarmCorners.WPF` project.
+
 ---
 
 ## License
