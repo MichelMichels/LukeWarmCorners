@@ -1,0 +1,28 @@
+﻿<Window
+    x:Class="LukeWarmCorners.WPF.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:LukeWarmCorners.WPF"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    d:DataContext="{d:DesignInstance Type={x:Type local:MainViewModel}}"
+    mc:Ignorable="d">
+    <Window.InputBindings>
+        <KeyBinding Key="F1" Command="{Binding WriteCurrentPositionCommand}" />
+    </Window.InputBindings>
+    <Border Padding="16">
+        <StackPanel>
+            <TextBlock Text="X" />
+            <TextBlock
+                Margin="0,0,0,16"
+                FontWeight="Bold"
+                Text="{Binding CurrentMousePosition.X}" />
+
+            <TextBlock Text="Y" />
+            <TextBlock FontWeight="Bold" Text="{Binding CurrentMousePosition.Y}" />
+        </StackPanel>
+    </Border>
+</Window>
